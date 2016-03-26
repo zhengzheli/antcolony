@@ -1,0 +1,60 @@
+﻿<Window x:Class="AntColonySimulation.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AntColonySimulation"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="558.55" Width="910">
+    <Grid Margin="0,0,2,0">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="Turn" Content="Next Day" HorizontalAlignment="Left" Height="27" Margin="123,289,0,0" VerticalAlignment="Top" Width="106"/>
+        <Label x:Name="MajorCount" Content="" HorizontalAlignment="Left" Height="24" Margin="67,8,0,0" VerticalAlignment="Top" Width="64" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.742"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label x:Name="MinorCount" Content="" HorizontalAlignment="Left" Height="25" Margin="68,42,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label x:Name="MaleCount" Content="" HorizontalAlignment="Left" Height="26" Margin="68,72,0,0" VerticalAlignment="Top" Width="67"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Height="310" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="58"><Run Text="Majors"/><LineBreak/><Run/><LineBreak/><Run Text="Minors"/><LineBreak/><Run/><LineBreak/><Run Text="Males"/><LineBreak/><Run/><LineBreak/><Run Text="Females"/><LineBreak/><Run/><LineBreak/><Run Text="Pupae"/><LineBreak/><Run/><LineBreak/><Run Text="Larvae"/><LineBreak/><Run/><LineBreak/><Run Text="Eggs"/><LineBreak/><Run/><LineBreak/><Run Text="Food"/><LineBreak/><Run/><LineBreak/><Run Text="Nest Size"/><LineBreak/><Run/><LineBreak/><Run Text="Day"/></TextBlock>
+        <Label x:Name="FemaleCount" Content="" HorizontalAlignment="Left" Height="29" Margin="68,103,0,0" VerticalAlignment="Top" Width="67" BorderThickness="0"/>
+        <Label x:Name="PupaeCount" Content="" HorizontalAlignment="Left" Height="34" Margin="68,132,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label x:Name="LarvaeCount" HorizontalAlignment="Left" Height="33" Margin="63,166,0,0" VerticalAlignment="Top" Width="72"/>
+        <Label x:Name="EggCount" Content="" HorizontalAlignment="Left" Height="27" Margin="63,199,0,0" VerticalAlignment="Top" Width="72"/>
+        <Label x:Name="FoodCount" Content="" HorizontalAlignment="Left" Height="26" Margin="68,226,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label x:Name="NestSizeCount" Content="" HorizontalAlignment="Left" Height="32" Margin="68,257,0,0" VerticalAlignment="Top" Width="67"/>
+        <Label x:Name="DayCount" Content="" HorizontalAlignment="Left" Height="31" Margin="68,289,0,0" VerticalAlignment="Top" Width="67"/>
+        <TextBox x:Name="FoodCollected" HorizontalAlignment="Left" Height="25" Margin="427,37,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="48" Text="0"/>
+        <Label x:Name="FoodCollectedLabel" Content="Food Collected: " HorizontalAlignment="Left" Height="25" Margin="331,37,0,0" VerticalAlignment="Top" Width="96"/>
+        <Label x:Name="FoodStreamLabel" Content="Food Stream: " HorizontalAlignment="Left" Height="26" Margin="344,72,0,0" VerticalAlignment="Top" Width="83"/>
+        <TextBox x:Name="FoodStreamTextBox" HorizontalAlignment="Left" Height="26" Margin="427,72,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="48" RenderTransformOrigin="0.251,0.575"/>
+        <TextBlock x:Name="TitleTextBlock" HorizontalAlignment="Left" Height="28" Margin="352,0,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontSize="16" FontWeight="Bold"><Run Text="Ant Simulation v1."/><Run Text="5"/></TextBlock>
+        <Label x:Name="NestSizeLabel" Content="cm^3 dug:  " HorizontalAlignment="Left" Height="29" Margin="354,98,0,0" VerticalAlignment="Top" Width="68"/>
+        <TextBox x:Name="NestSizeTextBox" HorizontalAlignment="Left" Height="24" Margin="427,103,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="48"/>
+        <Label x:Name="NursesLable" Content="# of nurses:" HorizontalAlignment="Left" Height="27" Margin="350,132,0,0" VerticalAlignment="Top" Width="72"/>
+        <TextBox x:Name="NursesTextBox" HorizontalAlignment="Left" Height="27" Margin="427,132,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="48"/>
+        <Label x:Name="MessageLabel" Content="" Height="132" Margin="270,231,-10,0" VerticalAlignment="Top" Grid.ColumnSpan="2"/>
+        <Button x:Name="RollDice" Content="Roll Dice" HorizontalAlignment="Left" Height="22" Margin="320,199,0,0" VerticalAlignment="Top" Width="102"/>
+        <TextBox x:Name="RollDiceTextBox" HorizontalAlignment="Left" Height="22" Margin="427,199,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="48"/>
+        <Label x:Name="Available_workers" Content="Available workers:" HorizontalAlignment="Left" Height="28" Margin="316,164,0,0" VerticalAlignment="Top" Width="111"/>
+        <TextBox x:Name="AvailableWorkersTextBox" HorizontalAlignment="Left" Height="22" Margin="427,166,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="48"/>
+        <Button x:Name="ForageButton" Content="Forage" HorizontalAlignment="Left" Height="30" Margin="528,37,0,0" VerticalAlignment="Top" Width="113"/>
+        <Button x:Name="DigButton" Content="Dig" HorizontalAlignment="Left" Height="29" Margin="528,100,0,0" VerticalAlignment="Top" Width="113"/>
+        <Button x:Name="NurseButton" Content="Nurse/Clean" HorizontalAlignment="Left" Height="30" Margin="528,129,0,0" VerticalAlignment="Top" Width="113"/>
+        <Button x:Name="GuardButton" Content="Guard/Shepherd" HorizontalAlignment="Left" Height="33" Margin="528,67,0,0" VerticalAlignment="Top" Width="113"/>
+        <Button x:Name="NextWorkerButton" Content="Next Worker" HorizontalAlignment="Left" Height="29" Margin="528,159,0,0" VerticalAlignment="Top" Width="113"/>
+        <Label x:Name="CurrentAntLabel" Content="Selected Ant:" HorizontalAlignment="Left" Height="30" Margin="678,37,0,0" VerticalAlignment="Top" Width="91"/>
+        <Label x:Name="CurrentAntStatsLabel" Content="" HorizontalAlignment="Left" Height="116" Margin="678,72,0,0" VerticalAlignment="Top" Width="185"/>
+        <Label x:Name="EggRateLabel" Content="Egg-Laying Rate" HorizontalAlignment="Left" Height="27" Margin="149,194,0,0" VerticalAlignment="Top" Width="100"/>
+        <TextBox x:Name="EggRateTextBox" HorizontalAlignment="Left" Height="27" Margin="249,194,0,0" TextWrapping="Wrap" Text="1" VerticalAlignment="Top" Width="51" TextChanged="textBox_TextChanged"/>
+
+    </Grid>
+</Window>
